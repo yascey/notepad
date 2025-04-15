@@ -164,7 +164,8 @@ auth.onAuthStateChanged(user => {
 document.getElementById("signupBtn").addEventListener("click", signup);
 document.getElementById("loginBtn").addEventListener("click", login);
 document.getElementById("logoutBtn").addEventListener("click", logout);
-
+document.getElementById("saveNoteBtn").addEventListener("click", saveNote);
+document.getElementById("loadNoteBtn").addEventListener("click", loadNote);
 
 // Fonksiyonları globalde erişilebilir hale getir
 window.signup = signup;
