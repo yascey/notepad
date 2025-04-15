@@ -1,17 +1,49 @@
 body {
   font-family: Arial, sans-serif;
-  padding: 20px;
-  background-color: #f9f9f9;
+  margin: 20px;
+  background: #f7f7f7;
+  color: #333;
 }
 
-#editor { height: 300px; border: 1px solid #ccc; margin-top: 10px; }
-    #noteSection { display: none; margin-top: 20px; }
-    select { margin: 5px; }
-    #editor {
+input, select, button {
+  padding: 10px;
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#editor {
   background-color: white;
   color: black;
   padding: 15px;
   min-height: 300px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+}
+
+#noteSection {
+  display: none;
+  margin-top: 20px;
+}
+
+label {
+  margin-top: 10px;
+  display: inline-block;
+}
+
+select {
+  margin: 5px;
 }
 
 :fullscreen #editor,

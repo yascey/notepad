@@ -1,47 +1,41 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Not Defteri</title>
-  <link rel="stylesheet" href="style.css" />
-  <!-- Quill CSS -->
-<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
-
+  <meta charset="UTF-8">
+  <title>Not Uygulaması</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 </head>
 <body>
-    <h2>Giriş / Kayıt</h2>
-    <input type="email" id="email" placeholder="Email"><br>
-    <input type="password" id="password" placeholder="Şifre"><br>
-    <button onclick="signup()">Kayıt Ol</button>
-    <button onclick="login()">Giriş Yap</button>
-    <button onclick="logout()">Çıkış Yap</button>
-    <p id="status"></p>
-  
-    <!-- Not Alanı -->
-    <div id="noteSection">
-      <h3>Notlarım</h3>
-      
-  
-      <label for="gradeSelect">Sınıf:</label>
-      <select id="gradeSelect"></select>
-  
-      <label for="unitSelect">Ünite:</label>
-      <select id="unitSelect"></select>
-  
-      <div id="editor"></div>
-  
-      <button onclick="saveNote()">💾 Kaydet</button>
-      <button onclick="loadNote()">☁️ Yükle</button>
-      <button id="fullscreenBtn">⛶ Tam Ekran</button>
-      <button id="clearNoteBtn">🧼 Notu Temizle</button>
-  
-      
-    </div>
+  <h2>Giriş / Kayıt</h2>
+  <input type="email" id="email" placeholder="Email"><br>
+  <input type="password" id="password" placeholder="Şifre"><br>
+  <button id="signupBtn">Kayıt Ol</button>
+  <button id="loginBtn">Giriş Yap</button>
+  <button id="logoutBtn">Çıkış Yap</button>
+  <p id="status"></p>
+
+  <div id="noteSection">
+    <h3>Notlarım</h3>
+    <label for="gradeSelect">Sınıf:</label>
+    <select id="gradeSelect"></select>
+    <label for="unitSelect">Ünite:</label>
+    <select id="unitSelect"></select>
+    <div id="editor"></div>
+    <button id="saveNoteBtn">💾 Kaydet</button>
+    <button id="loadNoteBtn">☁️ Yükle</button>
+    <button id="fullscreenBtn">⛶ Tam Ekran</button>
+    <button id="clearNoteBtn">🧼 Notu Temizle</button>
+  </div>
+<!-- Quill -->
+<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+  <!-- Firebase SDK -->
   <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
-  <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
-  <script src="app.js"></script>
+  
+  <!-- App Logic -->
+  <script src="app.js" defer></script>
 </body>
 </html>
